@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Intro to JavaScript</title>
+    <meta charset="utf-8">
+    <style>
+      @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+      @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+      @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+      body { font-family: 'Droid Serif'; }
+      h1, h2, h3 {
+        font-family: 'Yanone Kaffeesatz';
+        font-weight: normal;
+      }
+      a {
+        color: #a07cc0;
+      }
+      li {
+        font-size: 24pt;
+      }
+      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+      .inverse {
+        background: #000;
+        color: #fff;
+      }
+      .remark-slide-content {
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+      .stripe {
+        height: 5px;
+        width: 100%;
+        background-color: indigo;
+        border-top: 1px solid rebeccapurple;
+        border-bottom: 1px solid rebeccapurple;
+        position: absolute;
+        margin-top: 125px;
+        left: 0;
+        right: 0;
+      }
+
+      .remark-slide-right {
+          bottom: 12px;
+          opacity: .5;
+          position: absolute;
+          left: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <textarea id="source">
+
+class: center, middle, inverse
+
+# Intro to JavaScript
+---
+class: center, middle, inverse
+
+# Intro to JavaScript
+---
+layout: false
+class: center, middle, inverse
+# Carmen Bourlon
+## Twitter: [@carmalou](https://twitter.com/carmalou)
+## Blog: [carmalou.com](http://carmalou.com)
+
+
+???
+Don't forget to breathe.
+Take it slow.
+You'll do great.
+---
+class: left, middle, inverse
+
+# JavaScript is a _dynamic_, _loosely-typed_ programming language
+
+???
+You might have heard some developers talk about how JavaScript can be hard and
+how it has a lot of downsides. Real quick here, I want to go ahead and address
+some of the common reasons JavaScript is thought to be "hard."
+---
+class: left, middle, inverse
+
+# JavaScript is a _dynamic_, _loosely-typed_ programming language
+
+  - Dynamic: code is read on-the-fly, and executed as the page loads
+
+???
+JavaScript is different from languages before it, in that it is not compiled. So think
+of what Microsoft Word used to be. It was a file that you installed on your computer.
+
+Well that won't work for JavaScript because by its nature, the web can't know what
+site you're going to want to load. So JavaScript begins running as soon as the page
+requested gets returned.
+---
+class: left, middle, inverse
+
+# JavaScript is a _dynamic_, _loosely-typed_ programming language
+
+  - Dynamic: code is read on-the-fly, and executed as the page loads
+  - Loosely-typed: JavaScript variables can change types
+
+???
+Another feature of JavaScript is that it is loosely-typed. Other languages before JavaScript
+had variables with types that could not change. JavaScript is pretty YOLO about it's types
+and lets you change a variable's type on the fly, any time you want.
+
+I've got some examples I'll show you about that.
+---
+class: left, middle, inverse
+
+# JavaScript is a _dynamic_, _loosely-typed_ programming language
+
+  - Dynamic: code is read on-the-fly, and executed as the page loads
+  - Loosely-typed: JavaScript variables can change types
+  - Implemented by several different browsers
+  - Functionality may vary
+
+???
+I would argue that this is the bulk of what makes JavaScript difficult. There are four
+really major browsers: Chrome, Firefox, Safari, and IE. These are the most popular browsers
+and have the greatest market share -- at least here in the states.
+
+Because client-side JavaScript -- that's the JavaScript we're going to be running in the browser --
+is Implemented by the browser, that means its up to the browser how the native functions we're
+going to call are Implemented, or if they are Implemented at all.
+
+This can lead to one site having different behavior across different browsers.
+---
+class: left, middle, inverse
+
+# Why learn JavaScript?
+
+???
+Since it debuted in 1995, JavaScript has become one of the leading web languages, and this has
+only intensified with most of our software being moved to the cloud.
+
+Nearly every developer is going to need to understand JavaScript.
+
+And what's more, I would say JavaScript is one of the best languages to start with.
+---
+class: left, middle, inverse
+
+# Why learn JavaScript?
+
+  - It can be run in the browser
+
+???
+Nearly every computer today comes with a browser pre-installed, so you already have everything you need to run JavaScript when you get your computer.
+---
+class: left, middle, inverse
+
+# Why learn JavaScript?
+
+  - It can be run in the browser
+  - Widely adopted && documented
+
+???
+Because JavaScript is so popular there are tons and tons of resources for how to learn it.
+---
+class: left, middle, inverse
+
+# Why learn JavaScript?
+
+  - It can be run in the browser
+  - Widely adopted && documented
+  - Easy to read and understand
+
+???
+The syntax of JavaScript is close to English, so that makes it highly readable for a lot of people.
+---
+class: center, middle, inverse
+
+# Type Conversion
+
+???
+So if we think of a variable like a shoebox...you can only fit one pair of shoes in a shoebox.
+A JavaScript variable is like that ... it can only hold one thing at a time -- but it doesn't care what the type of that one thing is.
+(And when I talk about types, I'm referring to things like numbers, strings, and booleans.)
+
+Not only does JavaScript not care what type you use in your variable, it will also allow your variable to change types.
+
+SHOW EXAMPLE
+
+Word of caution about type conversion && the examples I use in this presentation
+---
+class: left, middle, inverse
+
+# JavaScript has three levels of Scope
+
+  - Global Scope
+  - Functional Scope
+  - Block-level Scope
+
+???
+Ok, so when I say scope ... what I mean is where in the program can this variable or thing be accessed?
+
+If your function is scoped at the global level, that means anything can access it.
+If your variable is scoped at the functional level, that means anything within the same function can access it.
+  However, anything outside of the function cannot directly access it.
+If your variable is part of block-level scope, that means its only accessible to the if-statement or for/while loop that instantiated it.
+  Once the if statement/loop is finished running..the variable is no longer accessible.
+
+SHOW EXAMPLE
+---
+class: center, middle, inverse
+
+# Hoisting
+
+???
+Think back to when we talked about how JavaScript is read in the browser on-the-fly. Hoisting relates back to that.
+
+In javascript, function declarations are hoisted. That is what allows you to call a function before it has been declared.
+
+Variable declarations are a little different though. JavaScript will go ahead and hoist the variable. This will stop any reference errors from arising if someone tries to use the variable before it's been declared.
+However, javascript does not hoist the variable value along with the variable. So if you try to log a variable before it's been declared, it won't throw a reference error, but it _will_ come back as undefined.
+
+SHOW EXAMPLE
+---
+class: left, middle, inverse
+
+# Request Data
+  - [XMLHttpRequest](link)
+  - [Fetch](link)
+
+???
+The nature of client-side javascript is that you are displaying some kind of data. And that data has to come from somewhere. It's not typically stored within the application you're writing -- instead its going to be coming from a remote database somewhere. In a lot of cases your front end javascript is going to be consuming an API (a layer which interacts with the database to get specific datasets). Your javascript will call that API, and get some data back.
+
+An ajax request (that's the XMLHttpRequest) is included in the js spec and is also the basis for a lot of ajax libraries. It's been the standard for a while and is nearly 20 years old.
+
+SHOW EXAMPLE
+
+Fetch on the other hand is quite a bit newer. I couldn't find an exact year it was introduced, but the oldest docs I found for it dated back to 2015.
+
+You'll see it's incredibly similar to an ajax request, but fetch returns something called a promise -- which we'll get into shortly
+
+SHOW EXAMPLE
+---
+class: left, middle, inverse
+
+# Async
+
+  - JavaScript is single-threaded
+  - JavaScript has no control over the amount of time an API call takes
+  - Code needs to pause and restart once the return from the API is there
+
+???
+This is where we get callbacks and promises from. These are two very common ways to deal the same problem.
+The problem is we need to pause until we get the data we need, but we don't want to hold up the entire page.
+
+First we'll take a look at callbacks.
+
+SHOW EXAMPLE
+
+Next we'll take a look at promises
+
+SHOW EXAMPLE
+
+THIS IS IT
+Ask for questions && then talk about SHECODES
+
+
+</textarea>
+    <script src="./scripts/remark-latest.min.js">
+    </script>
+    <script>
+      var slideshow = remark.create();
+
+      var arr = document.getElementsByClassName('remark-slide-content');
+      for(var i = 0; i < arr.length; i++) {
+        var tmpEl = document.createElement('div');
+        var innerLink = document.createElement('a');
+        innerLink.setAttribute('href', 'https://twitter.com/carmalou');
+        var innerText = document.createTextNode('Twitter: carmalou');
+        tmpEl.setAttribute('class', 'remark-slide-right');
+        innerLink.appendChild(innerText);
+        tmpEl.appendChild(innerLink);
+        arr[i].appendChild(tmpEl);
+      }
+    </script>
+  </body>
+</html>
