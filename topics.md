@@ -12,6 +12,6 @@
   - Fetch
 
 - Single threaded
-- Async
-- Callbacks (old but still good to know)
-- Promises
+  - Async
+  - Callbacks (old but still good to know)
+  - Promises
