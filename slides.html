@@ -42,10 +42,14 @@
 
       .remark-slide-right {
           bottom: 12px;
-          opacity: .5;
           position: absolute;
           left: 20px;
       }
+
+      .carmalou {
+          color: #CCBADC;
+      }
+
     </style>
   </head>
   <body>
@@ -64,7 +68,7 @@ class: center, middle, inverse
 # Carmen Bourlon
 ## Twitter: [@carmalou](https://twitter.com/carmalou)
 ## Blog: [carmalou.com](http://carmalou.com)
-
+## [MargieMap](https://carmalou.com/margie)
 
 ???
 Don't forget to breathe.
@@ -221,8 +225,8 @@ SHOW EXAMPLE
 class: left, middle, inverse
 
 # Request Data
-  - [XMLHttpRequest](link)
-  - [Fetch](link)
+  - [XMLHttpRequest](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest)
+  - [Fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API)
 
 ???
 The nature of client-side javascript is that you are displaying some kind of data. And that data has to come from somewhere. It's not typically stored within the application you're writing -- instead its going to be coming from a remote database somewhere. In a lot of cases your front end javascript is going to be consuming an API (a layer which interacts with the database to get specific datasets). Your javascript will call that API, and get some data back.
@@ -257,8 +261,17 @@ Next we'll take a look at promises
 
 SHOW EXAMPLE
 
+---
+layout: false
+class: center, middle, inverse
+# Carmen Bourlon
+## Twitter: [@carmalou](https://twitter.com/carmalou)
+## Blog: [carmalou.com](http://carmalou.com)
+## [MargieMap](https://carmalou.com/margie)
+
+???
 THIS IS IT
-Ask for questions && then talk about SHECODES
+Ask for questions
 
 
 </textarea>
@@ -274,6 +287,7 @@ Ask for questions && then talk about SHECODES
         innerLink.setAttribute('href', 'https://twitter.com/carmalou');
         var innerText = document.createTextNode('Twitter: carmalou');
         tmpEl.setAttribute('class', 'remark-slide-right');
+        innerLink.classList.add('carmalou');
         innerLink.appendChild(innerText);
         tmpEl.appendChild(innerLink);
         arr[i].appendChild(tmpEl);
