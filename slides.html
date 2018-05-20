@@ -189,6 +189,44 @@ SHOW EXAMPLE
 
 Word of caution about type conversion && the examples I use in this presentation
 ---
+class: center, middle, inverse
+
+# Truthy and Falsey values
+
+???
+
+If booleans are absolutely, being either true or false and nothing else, what are "truthy" and "falsey"? Honestly that just sounds really watered down, right?
+
+It kind of is. In JavaScript certain values are considered "falsey", meaning when they are evaluted in a boolean setting, they'll evaluate to false.
+
+SHOW EXAMPLE
+---
+class: center, middle, inverse
+
+# `==` vs `===`
+
+???
+Along the same lines of type conversion we also have double equals vs triple equals. I work with a lot of dotnet devs who always always always want to use triple equals, but the truth is that it's really unnecessary.
+
+Here is the difference: double equals will compare `value` without comparing `type`. Triple equals will compare both.
+
+If you are comparing values of the same type, there's really no need to compare using triple equals.
+
+If you are comparing two values that could both be falsey, you definitely don't want to use triple equals
+
+SHOW EXAMPLE
+---
+class: center, middle, inverse
+
+# `Null` vs `undefined`
+
+???
+In javascript if a variable is initialized without a value, it will be undefined by default
+
+However, null is also a valid value is javascript.
+
+If you see `null` as a value for a variable, that is going to mean that someone explicitly set the value to null.
+---
 class: left, middle, inverse
 
 # JavaScript has three levels of Scope

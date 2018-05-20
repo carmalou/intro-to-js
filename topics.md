@@ -2,6 +2,7 @@
 
 - Type conversion (anything goes)
   - Truthy/falsey values
+  - `==` vs `===`
   - Null vs undefined
 
 - Scope (Functional/Global)
@@ -24,3 +25,5 @@
   - Prototypes
 
 - Inheritance
+
+- Ref types
